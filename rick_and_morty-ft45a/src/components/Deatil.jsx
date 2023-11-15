@@ -27,14 +27,14 @@ const Deatil = () => {
 
 
     return (
-        <div>
-            <h1>SOY EL DETALLE 👀</h1>
-            <h2>{character?.name}</h2>
-            <h2>{character?.status}</h2>
-            <h2>{character?.species}</h2>
-            <h2>{character?.gender}</h2>
-            <h2>{character?.origin?.name}</h2>
-            <img src={character?.image} alt={character?.name} />
+        <div style={{backgroundColor: 'silver', width: '500px', borderRadius: '1rem'}}>
+            <h1 style={{color: 'black'}}>SOY EL DETALLE 👀</h1>
+            <h2 style={{color:'black'}}>{character?.name}</h2>
+            <h2 style={{color:'black'}}>{character?.status}</h2>
+            <h2 style={{color:'black'}}>{character?.species}</h2>
+            <h2 style={{color:'black'}}>{character?.gender}</h2>
+            <h2 style={{color:'black'}}>{character?.origin?.name}</h2>
+            <img src={character?.image} alt={character?.name} style={{borderRadius: '4rem'}}/>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import Card from './Card';
 export default function Cards({characters, onClose}) {
    console.log(characters);
    return (
-      <div>
+      <div style={{backgroundColor: 'teal', width: '400px', borderRadius: '1rem'}}>
          {characters.map(character => (
             <Card
                key={character.id}
