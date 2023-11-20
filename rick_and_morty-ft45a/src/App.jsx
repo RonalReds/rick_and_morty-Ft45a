@@ -9,7 +9,7 @@ import Deatil from './components/Deatil.jsx';
 import NotFound from './components/NotFound.jsx';
 import Form from './components/Form.jsx';
 
-const URL = "https://rym2.up.railway.app/api/character";
+   const URL = "https://rym2.up.railway.app/api/character";
    const API_KEY = "henrystaff";
 
 function App() {
@@ -17,14 +17,21 @@ function App() {
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
    const EMAIL = 'ronal@e.com';
-   const PASSWORD = 'red';
+   const PASSWORD = 'red1234';
 
    const login = (userData) => {
       if (userData.password === PASSWORD && userData.email === EMAIL) {
          setAccess(true);
          navigate('/home');
+      } else {
+         alert('Credenciales incorrecta')
       }
    }
+
+   const logout = () => {
+      setAccess(false);
+   }
+
    useEffect(() => {
       !access && navigate('/');
    }, [access]);
@@ -58,7 +65,7 @@ function App() {
 
    return (
       <div className='App'>
-         {location.pathname !== '/' && <Nav onSearch={onSearch} /> }
+         {location.pathname !== '/' && <Nav onSearch={onSearch} logout={logout} /> }
          <Routes>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
             <Route path='/about' element={<About/>} />
