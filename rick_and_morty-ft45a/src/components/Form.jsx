@@ -3,14 +3,17 @@ import validation from "./validation";
 
 
 
-const Form = ({login}) => {
 
+const Form = ({login}) => {
     const [userData, setUserData] = useState({
         email: '',
         password: ''
     });
 
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState({
+        email: 'Ingrese su usuario',
+        password: 'Ingrese su password'
+    });
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -32,13 +35,28 @@ const Form = ({login}) => {
      
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email: </label>
-            <input type="text" name="email" value={userData.email} onChange={handleChange} />
+            <label>Email: </label>
+            <input
+                id="email"
+                type="text"
+                name="email"
+                value={userData.email}
+                placeholder="Ingre su correo..."
+                onChange={handleChange} />
             {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
-            <label htmlFor="password">Password: </label>
-            <input type="text" name="password" value={userData.password} onChange={handleChange} />
+            <label>Password: </label>
+            <input
+                id="password"
+                type="text"
+                name="password"
+                value={userData.password}
+                placeholder="Ingrese su contrasena..."
+                onChange={handleChange} />
             {errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
-            <button>Submit</button>
+            <button
+                type="submit"
+                disabled={errors.email || errors.password }
+            >Submit</button>
         </form>
     )
 }
