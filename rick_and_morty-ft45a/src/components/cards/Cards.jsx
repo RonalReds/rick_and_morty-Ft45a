@@ -1,10 +1,15 @@
-import Card from './Card';
+import Card from '../card/Card';
 
 export default function Cards({characters, onClose}) {
-   console.log(characters);
+   
    return (
       <div style={{backgroundColor: 'teal', width: '400px', borderRadius: '1rem'}}>
-         {characters.map(character => (
+         {
+            
+            !characters.length
+               ? <h2>Ingrese un id...</h2>
+               :
+            characters.map(character => (
             <Card
                key={character.id}
                id={character.id}

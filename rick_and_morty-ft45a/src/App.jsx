@@ -1,13 +1,16 @@
 import './App.css';
-import Cards from './components/Cards.jsx';
-import Nav from './components/Nav.jsx';
-import { useState, useEffect} from 'react';
 import axios from 'axios';
+import { useState, useEffect} from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import About from './components/About.jsx';
-import Deatil from './components/Deatil.jsx';
-import NotFound from './components/NotFound.jsx';
-import Form from './components/Form.jsx';
+import { useDispatch } from 'react-redux';
+import Cards from './components/cards/Cards.jsx';
+import Nav from './components/nav/Nav.jsx';
+import About from './components/about/About.jsx';
+import Deatil from './components/detail/Deatil.jsx';
+import NotFound from './components/notFound/NotFound.jsx';
+import Form from './components/form/Form.jsx';
+import Favorites from './components/favorites/Favorites.jsx';
+import { removeFav } from './redux/actions.js';
 
    const URL = "https://rym2.up.railway.app/api/character";
    const API_KEY = "henrystaff";
@@ -59,8 +62,10 @@ function App() {
       navigate('/home');
    }
 
+   const dispatch = useDispatch()
    const onClose = (id) => {
       setCharacters(characters.filter(char => char.id !== Number(id)))
+      dispatch(removeFav(id))
    }
 
    return (
@@ -72,6 +77,8 @@ function App() {
             <Route path='/detail/:id' element={<Deatil/>} />
             <Route path='*' element={<NotFound/>} />
             <Route path='/' element={<Form login={login} />} />
+            <Route path='/favorites' element={<Favorites  onClose={onClose}/>} />
+            
          </Routes>
       </div>
    );
