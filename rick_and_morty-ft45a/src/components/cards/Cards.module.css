@@ -1,0 +1,4 @@
+.contenedorCards{
+    display: flex;
+    flex-wrap: wrap; 
+}

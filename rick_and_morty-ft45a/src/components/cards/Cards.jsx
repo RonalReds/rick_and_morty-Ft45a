@@ -1,9 +1,10 @@
 import Card from '../card/Card';
+import style from './Cards.module.css'
 
 export default function Cards({characters, onClose}) {
    
    return (
-      <div style={{backgroundColor: 'teal', width: '400px', borderRadius: '1rem'}}>
+      <div className={style.contenedorCards}>
          {
             
             !characters.length

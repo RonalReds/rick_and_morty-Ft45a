@@ -1,6 +1,7 @@
 import { useState } from "react";
 import validation from "../../util/validation";
-
+import style from "../form/Form.module.css";
+import imageForm from "./rick-morty.jpg";
 
 
 const Form = ({login}) => {
@@ -33,28 +34,32 @@ const Form = ({login}) => {
         }
      
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Email: </label>
+        <form onSubmit={handleSubmit} className={style.contenedor}>
+            <img src={imageForm} className={style.formImag} />
+            <label className={style.formLabel}>Email: </label>
             <input
                 id="email"
                 type="text"
                 name="email"
                 value={userData.email}
                 placeholder="Ingre su correo..."
-                onChange={handleChange} />
-            {errors.email && <p style={{color: 'red'}}>{errors.email}</p>}
-            <label>Password: </label>
+                onChange={handleChange}
+                className={style.formInput}/>
+            {errors.email && <p className={style.msjP}>{errors.email}</p>}
+            <label className={style.formLabel}>Password: </label>
             <input
                 id="password"
                 type="text"
                 name="password"
                 value={userData.password}
                 placeholder="Ingrese su contrasena..."
-                onChange={handleChange} />
-            {errors.password && <p style={{color: 'red'}}>{errors.password}</p>}
+                onChange={handleChange}
+                className={style.formInput}/>
+            {errors.password && <p className={style.msjP}>{errors.password}</p>}
             <button
                 type="submit"
-                disabled={errors.email || errors.password }
+                disabled={errors.email || errors.password}
+                className={style.formBtn}
             >Submit</button>
         </form>
     )
