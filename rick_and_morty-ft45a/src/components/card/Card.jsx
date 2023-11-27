@@ -37,7 +37,7 @@ export default function Card(props) {
                <button onClick={handleFavorite} className={style.btn}>🤍</button>
             )
          }
-            <button onClick={() => props.onClose(props.id)} className={style.btnCerrar}>X</button>
+            <button onClick={() => props.onClose(props.id)} className={style.btnCerrar}>❌</button>
          <Link to={`/detail/${props.id}`}>
             <h2 className={style.nameCard}>{props.name}</h2>
          </Link>

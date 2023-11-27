@@ -1,4 +1,3 @@
-import './App.css';
 import axios from 'axios';
 import { useState, useEffect} from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
@@ -69,7 +68,7 @@ function App() {
    }
 
    return (
-      <div className='App'>
+      <div>
          {location.pathname !== '/' && <Nav onSearch={onSearch} logout={logout} /> }
          <Routes>
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />

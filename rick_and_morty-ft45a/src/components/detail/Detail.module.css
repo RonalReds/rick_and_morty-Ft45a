@@ -1,0 +1,41 @@
+.contenedor{
+    
+    position: relative;
+    margin: 1rem .8rem;
+    width: 230px;
+    height: 400px;
+    
+    align-items: center;
+    border: 1px solid rgb(7, 4, 103);
+    box-shadow: 5px 7px 9px rgb(18, 1, 38);
+    transition: .3s;
+}
+.contenedor:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+
+
+    
+}
+.contenedor2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.imagenCard{    
+    
+    bottom: 0;
+    width: 100%;
+   
+}
+
+
+.detailCard{
+    
+    text-align: center;
+    margin: 7px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+}

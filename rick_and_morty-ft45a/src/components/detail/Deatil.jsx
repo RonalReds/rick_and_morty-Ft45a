@@ -1,4 +1,5 @@
 import axios from "axios";
+import style from './Detail.module.css';
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -27,14 +28,14 @@ const Deatil = () => {
 
 
     return (
-        <div style={{backgroundColor: 'silver', width: '500px', borderRadius: '1rem'}}>
-            <h1 style={{color: 'black'}}>SOY EL DETALLE 👀</h1>
-            <h2 style={{color:'black'}}>{character?.name}</h2>
-            <h2 style={{color:'black'}}>{character?.status}</h2>
-            <h2 style={{color:'black'}}>{character?.species}</h2>
-            <h2 style={{color:'black'}}>{character?.gender}</h2>
-            <h2 style={{color:'black'}}>{character?.origin?.name}</h2>
-            <img src={character?.image} alt={character?.name} style={{borderRadius: '4rem'}}/>
+        <div className={style.contenedor}>
+            
+            <h2 className={style.detailCard}>{character?.name}</h2>
+            <h2 className={style.detailCard}>{character?.status}</h2>
+            <h2 className={style.detailCard}>{character?.species}</h2>
+            <h2 className={style.detailCard}>{character?.gender}</h2>
+            <h2 className={style.detailCard}>{character?.origin?.name}</h2>
+            <img src={character?.image} alt={character?.name} className={style.imagenCard}/>
         </div>
     )
 }

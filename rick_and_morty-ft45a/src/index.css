@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -67,3 +67,39 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+ */
+
+ 
+body {
+  margin: 0;
+  padding: 0;
+  width: 1535px;
+  height: 792px;
+  background-image: linear-gradient(90deg,
+    #00B7D4, #505488, #2F3F80, #161569, #5A4894, #A950A1,#FF7CAE);
+  background-size: 500%;
+  animation: fanimado 10s infinite;
+ 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+  @keyframes fanimado{
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0% 50%;
+    }
+  }

@@ -11,8 +11,8 @@ const Form = ({login}) => {
     });
 
     const [errors, setErrors] = useState({
-        email: 'Ingrese su usuario',
-        password: 'Ingrese su password'
+        /* email: 'Ingrese su usuario',
+        password: 'Ingrese su password' */
     });
 
     const handleChange = (event) => {
