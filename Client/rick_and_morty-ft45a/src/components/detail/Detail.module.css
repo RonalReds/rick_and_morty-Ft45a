@@ -1,9 +1,9 @@
 .contenedor{
     
-    position: relative;
+    flex-direction: row-reverse;
     margin: 1rem .8rem;
-    width: 230px;
-    height: 400px;
+    width: 320px;
+    height: 350px;
     
     align-items: center;
     border: 1px solid rgb(7, 4, 103);
@@ -17,16 +17,12 @@
 
     
 }
-.contenedor2 {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 
 .imagenCard{    
-    
+   
     bottom: 0;
-    width: 100%;
+    width: 50%;
    
 }
 
