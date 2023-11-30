@@ -49,7 +49,8 @@ function App() {
          return alert (`${characterId[0].name} ya existe`)
       }
 
-      axios(`${URL}/${id}?key=${API_KEY}`)
+      //axios(`${URL}/${id}?key=${API_KEY}`)
+      axios(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(({ data }) => {
             if (data.name) {
                setCharacters([...characters, data]);
