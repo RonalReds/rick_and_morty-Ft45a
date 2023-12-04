@@ -21,15 +21,6 @@ function App() {
    const EMAIL = 'ronal@e.com';
    const PASSWORD = 'red1234';
 
-   /* const login = (userData) => {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
-      } else {
-         alert('Credenciales incorrecta')
-      }
-   }
- */
    function login(userData) {
       const { email, password } = userData;
       const URL = 'http://localhost:3001/rickandmorty/login/';
@@ -65,7 +56,7 @@ function App() {
          return alert (`${characterId[0].name} ya existe`)
       }
 
-      //axios(`${URL}/${id}?key=${API_KEY}`)
+      
       axios(`http://localhost:3001/rickandmorty/character/${id}`)
          .then(({ data }) => {
             if (data.name) {
