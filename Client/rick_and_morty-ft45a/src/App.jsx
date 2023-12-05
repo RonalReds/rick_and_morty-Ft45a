@@ -11,30 +11,28 @@ import Form from './components/form/Form.jsx';
 import Favorites from './components/favorites/Favorites.jsx';
 import { removeFav } from './redux/actions.js';
 
-   const URL = "https://rym2.up.railway.app/api/character";
-   const API_KEY = "henrystaff";
 
 function App() {
 
    const [characters, setCharacters] = useState([]);
    const [access, setAccess] = useState(false);
-   const EMAIL = 'ronal@e.com';
-   const PASSWORD = 'red1234';
+   
 
-   function login(userData) {
-      const { email, password } = userData;
-      const URL = 'http://localhost:3001/rickandmorty/login/';
-      axios(URL + `?email=${email}&password=${password}`)
-         .then(({ data }) => {
-            const { access } = data;
-            if (access) {
-               setAccess(data);
-               access && navigate('/home');
-            } else {
-               alert('Credenciales incorrecta');
-            }
-      });
-   }
+   async function login(userData) {
+      try {
+         const { email, password } = userData;
+         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const { data } = await axios(URL + `?email=${email}&password=${password}`)
+         if (data.access) {
+            setAccess(data.access);
+            navigate('/home');
+         } else {
+            alert('Credenciales incorrecta');
+         }
+      } catch (error) {
+         alert(error.message)
+      }
+   } 
 
 
    const logout = () => {
@@ -49,25 +47,24 @@ function App() {
    const location = useLocation();
 
  
-   const onSearch = (id) => {
-
-      const characterId = characters.filter(char => char.id === Number(id));
-      if (characterId.length) {
-         return alert (`${characterId[0].name} ya existe`)
-      }
-
-      
-      axios(`http://localhost:3001/rickandmorty/character/${id}`)
-         .then(({ data }) => {
-            if (data.name) {
-               setCharacters([...characters, data]);
-            } else {
-               alert('¡El id debe ser un número entre 1 y 826!');
-            }
+   const onSearch = async (id) => {
+      try {
+         const characterId = characters.filter(char => char.id === Number(id));
+         if (characterId.length) {
+            return alert (`${characterId[0].name} ya existe`)
          }
-      );
-      navigate('/home');
-   }
+         navigate('/home');
+         const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
+         if (data.name) {
+            setCharacters([...characters, data]);
+         } else {
+            alert('¡El id debe ser un número entre 1 y 826!');
+         }
+      } catch (error) {
+         alert(error.message)
+      }
+   }  
+   
 
    const dispatch = useDispatch()
    const onClose = (id) => {
@@ -91,4 +88,4 @@ function App() {
    );
 }
 
-export default App;
+      export default App;
