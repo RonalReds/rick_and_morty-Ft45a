@@ -1,0 +1,21 @@
+.contenedorInput{
+    display: flex;
+    height: 1.5em;
+    margin: 0 auto; 
+}
+
+.contenedorInput input{
+    padding: 0 0 0 1rem;
+    display: flex;
+    border-radius: .5rem;
+    width: 15em;
+    border: 0;
+    font-style: oblique;
+}
+.contenedorInput button {
+    margin: 0 0 0 1rem;
+    border-radius: .5rem;
+    border: 2px solid rgb(118, 8, 221);
+    background-color: rgb(59, 4, 75);
+    color: #fff;
+}

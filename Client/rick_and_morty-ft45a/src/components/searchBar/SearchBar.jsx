@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from "./SearchBar.module.css";
 
 export default function SearchBar({onSearch}) {
    const [id, setId] = useState('')
@@ -19,7 +20,7 @@ export default function SearchBar({onSearch}) {
       onSearch(randomNumber)
    }
    return (
-      <div>
+      <div className={style.contenedorInput}>
          <input type='tex' onChange={handleChange} value={id}/>
          <button onClick={handleClick}>Agregar</button>
          <button onClick={handleRandom}>Random</button>
