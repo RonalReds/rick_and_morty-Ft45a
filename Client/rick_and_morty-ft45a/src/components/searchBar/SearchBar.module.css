@@ -1,15 +1,19 @@
 .contenedorInput{
-    display: flex;
+   /*  display: flex; */
     height: 1.5em;
-    margin: 0 auto; 
+    margin-bottom: 1rem;
+    
+    
 }
 
 .contenedorInput input{
-    padding: 0 0 0 1rem;
-    display: flex;
+    /* padding: 0 1rem 0 1rem; */
+    /* display: flex; */
     border-radius: .5rem;
     width: 15em;
-    border: 0;
+    height: 1.3rem;
+    
+    
     font-style: oblique;
 }
 .contenedorInput button {
@@ -18,4 +22,5 @@
     border: 2px solid rgb(118, 8, 221);
     background-color: rgb(59, 4, 75);
     color: #fff;
+    padding: 5px;
 }

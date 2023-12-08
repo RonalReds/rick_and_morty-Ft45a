@@ -1,20 +1,22 @@
 .contenedor{
-    display: flex;
+   /*  display: flex;
     margin: .5rem auto;
     padding: 0;
-    height: 3em;
-    width: 80%;
+    height: 3em; */
+    
+    padding-top: 1%;
+    max-width: 100%;
     background-color: #4a254a;
     opacity: .8;
+   /*  opacity: .8;
     border-radius: 2rem;
     align-items: center;
     font-weight: 700;
-    border: 1px solid #271127;
+    border: 1px solid #271127; */
 }
-.link{
-    all: unset;
-}
+
 .Btn2{
+    
     height: 2em;
     width: 5em;
     text-align:center;
@@ -24,6 +26,7 @@
 } 
 
 .Btn1{
+    
     margin: 0 4rem 0 4rem;
     height: 2em;
     background-color: rgb(100, 4, 141);

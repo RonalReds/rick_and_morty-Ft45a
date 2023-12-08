@@ -16,7 +16,8 @@ export default function Nav({onSearch, logout}) {
             <NavLink to={'/home'} className={style.link}>
                 <button className={style.Btn2}>Home</button>
             </NavLink>
-            <button onClick={logout} className={style.Btn4}>Logout ❌</button>
+                <button onClick={logout} className={style.Btn4}>Logout ❌</button>
         </div>
+        
     )
 }

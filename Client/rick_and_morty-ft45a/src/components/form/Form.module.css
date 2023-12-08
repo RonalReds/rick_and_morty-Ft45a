@@ -1,6 +1,5 @@
 
 .contenedor{
-    position: absolute;
     border: 1px solid black;
     margin-top: 12%;
     margin-left: 35%;
@@ -18,42 +17,36 @@
 }
 
 .formImag{
-    margin: 1rem 0 0 0;
-    position: relative;
-    margin-left: 17%;
+    margin: 1rem auto;
     border-radius: 99999rem;
    
 }
 
 .formLabel {
-    display: block;
-    margin: .5rem 3rem 1rem 3rem;
+    display: flex;
+    margin-bottom: .2rem;
+    margin-left: 5rem;
     font-weight: 600;
    
 }
 
 .formInput {
-    display: block;
-    width: 80%;
+    width: 60%;
     height: 1.5rem;
-    margin: 0 10% 0 10%;
     border-radius: .5rem;
     border: 0;
     outline:1px solid rgb(3, 3, 92);
     background-color: transparent;
-    font-weight: 700;
     padding: 0 0 0 1rem;
     cursor: pointer;
     
 }
 
 .formBtn{
-    display: block;
-    width: 70%;
+    width: 40%;
     height: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-left: 60px;
     border-radius: .5rem;
     background-color: rgb(5, 5, 95);
     font-weight: 700;
