@@ -32,12 +32,15 @@ const Deatil = () => {
     return (
         <div className={style.contenedor}>
             
-            <img src={character?.image} alt={character?.name} className={style.imagenCard}/>
-            <h2 className={style.detailCard}>{character?.name}</h2>
-            <h2 className={style.detailCard}>{character?.status}</h2>
-            <h2 className={style.detailCard}>{character?.species}</h2>
-            <h2 className={style.detailCard}>{character?.gender}</h2>
-            <h2 className={style.detailCard}>{character?.origin?.name}</h2>
+            <img src={character?.image} alt={character?.name} 
+             className={style.imagenCard} />
+            <div>
+               <h2 className={style.detailCard}>Name: {character?.name}</h2>
+               <h2 className={style.detailCard}>Status: {character?.status}</h2>
+               <h2 className={style.detailCard}>Species: {character?.species}</h2>
+               <h2 className={style.detailCard}>Gender: {character?.gender}</h2>
+               <h2 className={style.detailCard}>Origin: {character?.origin?.name}</h2>
+            </div>
         </div>
     )
 }
