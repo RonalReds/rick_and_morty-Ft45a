@@ -34,7 +34,7 @@ const Deatil = () => {
             
             <img src={character?.image} alt={character?.name} 
              className={style.imagenCard} />
-            <div>
+            <div className={style.detailCard}>
                <h2 className={style.detailCard}>Name: {character?.name}</h2>
                <h2 className={style.detailCard}>Status: {character?.status}</h2>
                <h2 className={style.detailCard}>Species: {character?.species}</h2>
