@@ -8,7 +8,7 @@ export default function Cards({characters, onClose}) {
          {
             
             !characters.length
-               ? <h2>Ingrese un id...</h2>
+               ? <h2 className={style.contenedorh2}>Enter the ID of a character...</h2>
                :
             characters.map(character => (
             <Card

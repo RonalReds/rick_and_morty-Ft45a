@@ -1,54 +1,27 @@
 .contenedor{
-   /*  display: flex;
-    margin: .5rem auto;
-    padding: 0;
-    height: 3em; */
-    
-    padding-top: 1%;
-    max-width: 100%;
-    background-color: #4a254a;
-    opacity: .8;
-   /*  opacity: .8;
-    border-radius: 2rem;
-    align-items: center;
-    font-weight: 700;
-    border: 1px solid #271127; */
+    display: inline-flex;
+    margin: 1rem;
 }
-
-.Btn2{
     
-    height: 2em;
-    width: 5em;
-    text-align:center;
-    background-color: rgb(100, 4, 141);
+.contenedor button {
+    background-color: rgb(59, 4, 75);
     color: #fff;
+    width: 4rem;
+    height: 2rem;
+    margin: 0 1px 0 8px;
+    border: none;
     border-radius: .5rem;
-} 
-
-.Btn1{
-    
-    margin: 0 4rem 0 4rem;
-    height: 2em;
-    background-color: rgb(100, 4, 141);
-    list-style: none;
-    color: #fff;
-    border-radius: .5rem;
-}
-.Btn4{
-    margin: 0 4rem 0 4rem;
-    height: 2em;
-    background-color: rgb(100, 4, 141);
-    color: #fff;
-    border-radius: .5rem;
-    
-}
-.Btn3{
-    height: 2em;
-    background-color: rgb(100, 4, 141);
-    color: #fff;
-    border-radius: .5rem;
+    transition: .5s;
 }
 .contenedor button:hover {
+    background-color: rgb(149, 28, 186);
+    box-shadow: 0 0 1px 1px rgb(149, 28, 186);
     cursor: pointer;
-    transform: scale(1.05);
-}   
+   /*  transform: scale(1.05); */
+}
+.contenedorBtn1{
+    margin: 0 10rem 0 2rem;
+}
+.contenedorBtn2{
+    margin: 0 2rem 0 10rem;
+}

@@ -33,7 +33,8 @@ module.exports = (sequelize) => {
       },
       location: {
          type: DataTypes.STRING,
-         allowNull: false
+         allowNull: false,
+         defaultValue: 'unknown'
       }
    }, { timestamps: false });
 };

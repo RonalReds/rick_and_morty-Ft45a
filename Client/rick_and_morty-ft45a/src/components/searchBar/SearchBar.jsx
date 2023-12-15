@@ -1,5 +1,8 @@
 import { useState } from "react";
 import style from "./SearchBar.module.css";
+import { AiOutlineUserAdd } from "react-icons/ai";
+import { FaRandom } from "react-icons/fa";
+
 
 export default function SearchBar({onSearch}) {
    const [id, setId] = useState('')
@@ -21,9 +24,9 @@ export default function SearchBar({onSearch}) {
    }
    return (
       <div className={style.contenedorInput}>
-         <input type='tex' onChange={handleChange} value={id}/>
-         <button onClick={handleClick}>Agregar</button>
-         <button onClick={handleRandom}>Random</button>
+         <button onClick={handleClick} ><AiOutlineUserAdd size='1.5rem'/></button>
+         <input type='tex' onChange={handleChange} value={id} placeholder="Enter ID" className={style.contenedorBtn1}/>
+         <button onClick={handleRandom}><FaRandom size='1.5rem'/></button>
       </div>
    );
 }

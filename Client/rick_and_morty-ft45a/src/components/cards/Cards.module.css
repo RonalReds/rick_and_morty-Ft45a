@@ -1,4 +1,16 @@
 .contenedorCards{
+    margin-top: 2rem;
+    justify-content: center;
     display:flex;
     flex-wrap: wrap;
+}
+
+.contenedorh2{
+    display: inline-block;
+    text-align: center;
+    margin-top: 15%;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    font-style: oblique;
 }

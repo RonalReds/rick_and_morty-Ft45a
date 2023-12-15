@@ -1,5 +1,29 @@
 .contenedorFav{
+    margin-top: 2rem;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap; 
+    
 }
- 
+.selec{
+    background-color: rgb(44, 5, 107);
+    color: #fff;
+    width: 7rem;
+    height: 2rem;
+    margin: 0 1px 0 8px;
+    border-radius: .5rem;
+    text-align: center;
+}
+.selec:hover{
+    box-shadow: 0 0 2px 3px rgb(149, 28, 186);
+    cursor: pointer;
+}
+.contenedorh2{
+    display: inline-block;
+    text-align: center;
+    margin-top: 15%;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:xx-large;
+    
+}
